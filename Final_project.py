@@ -11,7 +11,7 @@ MONTHS = ['january', 'february', 'march', 'april', 'may', 'june']
 DAYS = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
               
 
-def get_filters():
+def get_user_filters():
     """
     Asks user to specify a city, month, and day to analyze.
 
@@ -44,7 +44,7 @@ def get_filters():
     return city, month, day
 
 
-def load_data(city, month, day):
+def load_filtered_data(city, month, day):
     """
     Loads data for the specified city and filters by month and day if applicable.
 
@@ -97,7 +97,7 @@ def convert_24hr_to_12hr(hour_24hr):
     
     return hour_12hr
 
-def time_stats(df):
+def time_statistics(df):
     """Displays statistics on the most frequent times of travel."""
 
     print('\nCalculating The Most Frequent Times of Travel...\n')
@@ -207,10 +207,10 @@ def user_stats(df):
 
 def main():
     while True:
-        city, month, day = get_filters()
-        df = load_data(city, month, day)
+        city, month, day = get_user_filters()
+        df = load_filtered_data(city, month, day)
 
-        time_stats(df)
+        time_statistics(df)
         station_stats(df)
         trip_duration_stats(df)
         user_stats(df)
