@@ -5,7 +5,7 @@ July 21, 2020
 Final_project
 
 ### Description
-Accepts user input to filter bike share data from three U.S. cities (Chicago, New York City, and Washington). Allows fitlers based upon location, month, and day of week.
+Accepts user input to filter bike share data from three U.S. cities (Chicago, New York City, and Washington). Allows fitlers based upon location, month, and day of week. Allows users to run multiple queries.
 
 ### Files used
 chicago.csv
