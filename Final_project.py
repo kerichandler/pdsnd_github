@@ -11,7 +11,7 @@ MONTHS = ['january', 'february', 'march', 'april', 'may', 'june']
 DAYS = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
               
 
-def get_filters():
+def get_user_filters():
     """
     Asks user to specify a city, month, and day to analyze.
 
@@ -206,7 +206,7 @@ def user_stats(df):
 
 def main():
     while True:
-        city, month, day = get_filters()
+        city, month, day = get_user_filters()
         df = load_data(city, month, day)
 
         time_stats(df)
